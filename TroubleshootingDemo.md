@@ -8,7 +8,7 @@ kibana:
 
 ```
 set +o history
-#change elasticsearch.hosts: ["http://elastic0:92OO", "http://elastic1:9200", "http://elastic2:9200"]
+#change elasticsearch.hosts: ["http://elastic0:92OO", "http://elastic1:9200", "http://elastic2:9200"] in /etc/kibana/kibana.yml
 sudo systemctl restart kibana
 set -o history
 ```
@@ -19,7 +19,7 @@ sensor:
 
 ```
 set +o history
-#remove @load /scripts/kafka.zeek in local.zeek
+#remove @load /scripts/kafka.zeek in usr/share/zeek/site/local.zeek
 sudo -u zeek zeekctl deploy
 set -o history
 ```
