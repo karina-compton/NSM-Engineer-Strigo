@@ -8,9 +8,8 @@ kibana:
 
 ```
 set +o history
-sudo firewall-cmd --add-port=8000/tcp --permanent
-sudo firewall-cmd --remove-port=80/tcp --permanent
-sudo firewall-cmd --reload
+#change elasticsearch.hosts: ["http://elastic0:92OO", "http://elastic1:9200", "http://elastic2:9200"]
+sudo systemctl restart kibana
 set -o history
 ```
 
@@ -20,7 +19,7 @@ sensor:
 
 ```
 set +o history
-sudo sed -i 's/9092/9029/g' /usr/share/zeek/site/scripts/kafka.zeek
+#remove @load /scripts/kafka.zeek in local.zeek
 sudo -u zeek zeekctl deploy
 set -o history
 ```
