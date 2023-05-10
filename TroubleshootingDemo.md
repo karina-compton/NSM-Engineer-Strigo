@@ -30,7 +30,7 @@ pipeline0, pipeline1, pipeline2
 
 ```
 set +o history
-change all pipelines to pipelineX:9092 to pipelineX:9200 in
+change all pipelines from pipelineX:9092 to pipelineX:9200 in
 /etc/logstash/conf.d/logstash-100-input-kafka-suricata.conf
 sudo systemctl restart logstash
 set -o history
